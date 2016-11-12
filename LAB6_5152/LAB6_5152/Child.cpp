@@ -3,15 +3,15 @@
 std::string Child::GetDescription()
 {
 	std::string tmpS = Surname + " " + Name + ", " + IntToStr(Age) + " years old," + SexToStr(sex);
-	if (Mother != NULL && Father != NULL)
+	if (Mother != nullptr && Father != nullptr)
 	{
 		tmpS = tmpS + ", Parents are " + Mother->Name + " and " + Father->Name;
 	}
-	else if (Mother!=NULL)
+	else if (Mother!=nullptr)
 	{
 		tmpS = tmpS + ", Mother is " + Mother->Name ;
 	}
-	else if (Father != NULL)
+	else if (Father != nullptr)
 	{
 		tmpS = tmpS + ", Father is " + Father->Name;
 	}
@@ -19,7 +19,8 @@ std::string Child::GetDescription()
 	{
 		tmpS = tmpS + ", Parents are not specified";
 	}
-	if (School != "")
+	
+	if (School.empty() == false)
 	{
 		tmpS = tmpS + ", " + School;
 	}
@@ -29,8 +30,10 @@ std::string Child::GetDescription()
 void Child::RandChild(Child * child)
 {
 	child->FillRandomPerson();
-	child->SetAge(1 + rand() % 16);
-	child->School = "Rand School";
+	child->SetAge(12);
+	child->Father = nullptr;
+	child->Mother = nullptr;
+	child->School = "Rand School";	
 }
 
 
@@ -53,6 +56,8 @@ void Child::SetAge(int age)
 
 Child::Child()
 {
+	Mother = nullptr;
+	Father = nullptr;
 }
 
 Child::~Child()

@@ -5,13 +5,13 @@ class Child :
 	public Person
 {
 public:
-	Person* Mother;
-	Person* Father;
+	Person* Mother = nullptr;
+	Person* Father=nullptr;
 	std::string GetDescription();
 	static void RandChild(Child * child);
 	int GetAge();
 	void SetAge(int age);
-	std::string School;
+	std::string School = " ";
 	Child();
 	~Child();
 };
