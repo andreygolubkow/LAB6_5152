@@ -142,7 +142,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Adult.cpp" />
+    <ClCompile Include="Child.cpp" />
     <ClCompile Include="LAB6_5152.cpp" />
+    <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Sex.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Adult.h" />
+    <ClInclude Include="Child.h" />
+    <ClInclude Include="Person.h" />
+    <ClInclude Include="Sex.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
