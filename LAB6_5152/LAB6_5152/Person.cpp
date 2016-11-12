@@ -103,6 +103,11 @@ void Person::FillRandomPerson()
 	}
 }
 
+std::string Person::GetDescription()
+{
+	return Surname + " " + Name + ", " + IntToStr(Age) + " years old," + SexToStr(sex);
+}
+
 std::istream & operator >> (std::istream & is, Person & person)
 {
 	std::string ageStr = "";

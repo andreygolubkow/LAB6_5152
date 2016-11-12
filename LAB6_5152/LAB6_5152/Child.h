@@ -4,14 +4,14 @@
 class Child :
 	public Person
 {
+public:
 	Person* Mother;
 	Person* Father;
 	std::string GetDescription();
-	static Person* RandChild();
+	static void RandChild(Child * child);
 	int GetAge();
 	void SetAge(int age);
-	char School[100];
-public:
+	std::string School;
 	Child();
 	~Child();
 };

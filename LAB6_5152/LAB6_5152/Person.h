@@ -1,6 +1,7 @@
 #pragma once
 #include "Sex.h"
 #include <string>
+#include <sstream>
 
 class  Person
 {
@@ -14,6 +15,13 @@ public:
 	int GetAge();
 	void SetAge(int age);
 	void FillRandomPerson();
+	std::string GetDescription();
+	std::string IntToStr(int x)
+	{
+		std::stringstream r;
+		r << x;
+		return r.str();
+	};
 	friend std::ostream& operator <<(std::ostream & os, Person const & person);
 private:
 

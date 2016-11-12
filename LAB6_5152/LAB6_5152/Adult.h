@@ -10,10 +10,10 @@ public:
 	~Adult();
 	std::string GetDescription();
 	static void RandAdult(Adult * adult);
-	Person* MarriedOn;
+	Person* MarriedOn = NULL;
 	int GetAge();
 	void SetAge(int age);
-	std::string WorkPlace;
+	std::string WorkPlace = "";
 
 };
 
