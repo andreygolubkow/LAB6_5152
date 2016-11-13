@@ -4,7 +4,8 @@
 
 std::string Adult::GetDescription()
 {
-	std::string tmpS = Surname + " " + Name + ", " + IntToStr(Age) + " years old," + SexToStr(sex);
+	string tmpS(Surname + " " + Name + ", " + IntToStr(Age) + " years old," + SexToStr(sex));
+//	string tmpWrkPlace = WorkPlace;
 	if (MarriedOn == nullptr)
 	{
 		tmpS = tmpS + ", single";
@@ -13,14 +14,14 @@ std::string Adult::GetDescription()
 	{
 		tmpS = tmpS + ", married on "+MarriedOn->Name+" "+MarriedOn->Surname;
 	}
-	/*if (WorkPlace!="")
+	if (WorkPlace.length()>0)
 	{
-		tmpS = tmpS + ", " + WorkPlace;
+		tmpS = tmpS + ", " +WorkPlace;
 	}
 	else
 	{
 		tmpS = tmpS + ", unworked";
-	}*/
+	}
 	return tmpS;
 }
 
@@ -29,7 +30,8 @@ void Adult::RandAdult(Adult * adult)
 	adult->FillRandomPerson();
 	adult->SetAge(25);
 	adult->MarriedOn = nullptr;
-	adult->WorkPlace = "tester in Random Work Company";
+	adult->WorkPlace = " Rand workPlace";
+	
 }
 
 
@@ -52,10 +54,11 @@ void Adult::SetAge(int age)
 
 Adult::Adult()
 {
-	WorkPlace = "none";
+	WorkPlace = "";
 }
 
 
 Adult::~Adult()
 {
+
 }

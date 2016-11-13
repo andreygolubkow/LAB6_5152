@@ -19,7 +19,6 @@ std::string Child::GetDescription()
 	{
 		tmpS = tmpS + ", Parents are not specified";
 	}
-	
 	if (School.empty() == false)
 	{
 		tmpS = tmpS + ", " + School;

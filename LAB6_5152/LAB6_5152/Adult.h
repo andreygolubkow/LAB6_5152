@@ -1,7 +1,7 @@
 #pragma once
 #include "Person.h"
 #include <string>
-
+using namespace std;
 class Adult :
 	public Person
 {
@@ -13,7 +13,6 @@ public:
 	Person* MarriedOn = nullptr;
 	int GetAge();
 	void SetAge(int age);
-	std::string WorkPlace = "";
-
+	string WorkPlace;
 };
 

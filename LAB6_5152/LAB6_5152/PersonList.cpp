@@ -4,11 +4,7 @@
 
 PersonList::PersonList()
 {
-	_head = new PersonListItem();
-	_head->Person.ReadPerson();
-	_head->NextItem = nullptr;
-	_head->PrevItem = nullptr;
-	_count = 1;
+
 }
 
 PersonList::PersonList(Person* person)
@@ -68,7 +64,7 @@ Person* PersonList::Find(int index)
 		if (index > _count || index < 1)
 		{
 
-			return &_head->Person;
+			return _head->Person;
 		}
 		else
 		{
@@ -79,7 +75,7 @@ Person* PersonList::Find(int index)
 
 				currentItem = currentItem->NextItem;
 			}
-			return &currentItem->Person;
+			return currentItem->Person;
 		}
 	}
 }

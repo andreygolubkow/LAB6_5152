@@ -1,6 +1,6 @@
 #pragma once
 #include "Person.h"
-
+using namespace std;
 class Child :
 	public Person
 {
@@ -11,7 +11,7 @@ public:
 	static void RandChild(Child * child);
 	int GetAge();
 	void SetAge(int age);
-	std::string School = " ";
+	string School;
 	Child();
 	~Child();
 };

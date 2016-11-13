@@ -1,4 +1,4 @@
-#include "Adult.h"
+﻿#include "Adult.h"
 #include "Child.h"
 #include "Person.h"
 #include "Sex.h"
@@ -9,14 +9,16 @@ using namespace std;
 
 int main()
 {
-	PersonList personList;
 
+	
 	Child * childPointer = new Child();
 	Adult * adultPointer = new Adult();
-
+	
 	Child::RandChild(childPointer);
 	Adult::RandAdult(adultPointer);
-	personList.Add(childPointer);
+	
+
+	PersonList personList(childPointer);
 	personList.Add(adultPointer);
 
 	for (int i = 0;i<personList.GetCount();i++)
@@ -34,6 +36,6 @@ int main()
 				Adult * adult = (Adult*)personTemp;
 				cout << adult->GetDescription();
 			}
-	}
+	} 
 	return 0;
 }

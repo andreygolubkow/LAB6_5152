@@ -17,7 +17,7 @@ public:
 private:
 	struct PersonListItem
 	{
-		Person Person;
+		Person *Person;
 		PersonListItem* NextItem;
 		PersonListItem* PrevItem;
 	};
